@@ -1,0 +1,119 @@
+{
+    "survey": [
+        {
+            "parameter": "learning_style",
+            "questions": [
+                {
+                    "question": "When learning a new programming concept, do you prefer:",
+                    "options": [
+                        {"text": "Watching video tutorials and diagrams", "value": {"visual": 5, "auditory": 1, "kinesthetic": 2, "read_write": 3}},
+                        {"text": "Listening to explanations or podcasts", "value": {"visual": 2, "auditory": 5, "kinesthetic": 1, "read_write": 3}},
+                        {"text": "Reading documentation and writing notes", "value": {"visual": 3, "auditory": 2, "kinesthetic": 1, "read_write": 5}},
+                        {"text": "Writing code and experimenting hands-on", "value": {"visual": 2, "auditory": 1, "kinesthetic": 5, "read_write": 3}}
+                    ]
+                },
+                {
+                    "question": "Which of these helps you understand a new algorithm best?",
+                    "options": [
+                        {"text": "A flowchart or diagram", "value": {"visual": 5, "auditory": 2, "kinesthetic": 1, "read_write": 3}},
+                        {"text": "A verbal explanation or lecture", "value": {"visual": 2, "auditory": 5, "kinesthetic": 1, "read_write": 3}},
+                        {"text": "Reading pseudocode and writing notes", "value": {"visual": 3, "auditory": 2, "kinesthetic": 1, "read_write": 5}},
+                        {"text": "Implementing the algorithm step-by-step", "value": {"visual": 2, "auditory": 1, "kinesthetic": 5, "read_write": 3}}
+                    ]
+                }
+            ]
+        },
+        {
+            "parameter": "difficulty_preference",
+            "questions": [
+                {
+                    "question": "How would you describe your current programming experience?",
+                    "options": [
+                        {"text": "Just starting out", "value": "beginner"},
+                        {"text": "Comfortable with basics, but not advanced topics", "value": "intermediate"},
+                        {"text": "Experienced with multiple languages and frameworks", "value": "advanced"}
+                    ]
+                },
+                {
+                    "question": "When solving coding problems, how challenging do you prefer them to be?",
+                    "options": [
+                        {"text": "Easy to understand and implement", "value": "beginner"},
+                        {"text": "Moderately challenging, requiring some research", "value": "intermediate"},
+                        {"text": "Highly complex, requiring deep understanding", "value": "advanced"}
+                    ]
+                }
+            ]
+        },
+        {
+            "parameter": "time_commitment",
+            "questions": [
+                {
+                    "question": "On average, how many hours per week can you dedicate to learning?",
+                    "options": [
+                        {"text": "Less than 2 hours", "value": 1},
+                        {"text": "2-5 hours", "value": 3},
+                        {"text": "5-10 hours", "value": 7},
+                        {"text": "More than 10 hours", "value": 10}
+                    ]
+                },
+                {
+                    "question": "How long do you prefer each learning session to be?",
+                    "options": [
+                        {"text": "Short (15-30 minutes)", "value": 0.5},
+                        {"text": "Medium (30-60 minutes)", "value": 1},
+                        {"text": "Long (1-2 hours)", "value": 2}
+                    ]
+                }
+            ]
+        },
+        {
+            "parameter": "preferred_format",
+            "questions": [
+                {
+                    "question": "Which type of resource do you find most engaging?",
+                    "options": [
+                        {"text": "Video tutorials and lectures", "value": "video"},
+                        {"text": "Written articles and documentation", "value": "text"},
+                        {"text": "Interactive coding exercises and challenges", "value": "interactive"}
+                    ]
+                },
+                {
+                    "question": "When learning a new programming language, what do you prefer?",
+                    "options": [
+                        {"text": "Watching someone code and explain", "value": "video"},
+                        {"text": "Reading documentation and examples", "value": "text"},
+                        {"text": "Solving problems in an interactive environment", "value": "interactive"}
+                    ]
+                }
+            ]
+        },
+        {
+            "parameter": "domain_interest",
+            "questions": [
+                {
+                    "question": "What is your primary goal for learning computer science?",
+                    "options": [
+                        {"text": "Career advancement", "value": "job_interview"},
+                        {"text": "Personal projects and hobbies", "value": "learning"},
+                        {"text": "Academic requirements", "value": "learning"},
+                        {"text": "Entrepreneurship", "value": "startup"}
+                    ]
+                },
+                {
+                    "question": "Which of these areas are you most interested in? (Select all that apply)",
+                    "options": [
+                        {"text": "Web Development", "value": "web_development"},
+                        {"text": "Data Science and Machine Learning", "value": "data_science"},
+                        {"text": "Mobile App Development", "value": "mobile_development"},
+                        {"text": "Cybersecurity", "value": "cybersecurity"},
+                        {"text": "Game Development", "value": "game_development"},
+                        {"text": "Cloud Computing and DevOps", "value": "cloud_computing"},
+                        {"text": "Software Engineering Principles", "value": "software_engineering"},
+                        {"text": "Artificial Intelligence", "value": "artificial_intelligence"}
+                    ],
+                    "multi_select": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,970 @@
+[
+    {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 10,
+            "domainInterest": [
+                "Computer Science",
+                "Algorithms"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-01T10:00:00Z"
+    },
+    {
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "auditory",
+            "timeCommitment": 15,
+            "domainInterest": [
+                "Data Structures",
+                "Machine Learning"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-02T10:00:00Z"
+    },
+    {
+        "name": "Alice Johnson",
+        "email": "alice.johnson@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 5,
+            "domainInterest": [
+                "Web Development",
+                "Databases"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-03T10:00:00Z"
+    },
+    {
+        "name": "Bob Brown",
+        "email": "bob.brown@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "kinesthetic",
+            "timeCommitment": 20,
+            "domainInterest": [
+                "Networking",
+                "Security"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-04T10:00:00Z"
+    },
+    {
+        "name": "Charlie Davis",
+        "email": "charlie.davis@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 8,
+            "domainInterest": [
+                "Artificial Intelligence",
+                "Robotics"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-05T10:00:00Z"
+    },
+    {
+        "name": "David Evans",
+        "email": "david.evans@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "auditory",
+            "timeCommitment": 12,
+            "domainInterest": [
+                "Software Engineering",
+                "Project Management"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-06T10:00:00Z"
+    },
+    {
+        "name": "Eve Foster",
+        "email": "eve.foster@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "kinesthetic",
+            "timeCommitment": 6,
+            "domainInterest": [
+                "Game Development",
+                "Graphics"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-07T10:00:00Z"
+    },
+    {
+        "name": "Frank Green",
+        "email": "frank.green@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 14,
+            "domainInterest": [
+                "Operating Systems",
+                "Embedded Systems"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-08T10:00:00Z"
+    },
+    {
+        "name": "Grace Hill",
+        "email": "grace.hill@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 18,
+            "domainInterest": [
+                "Cryptography",
+                "Blockchain"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-09T10:00:00Z"
+    },
+    {
+        "name": "Henry Jackson",
+        "email": "henry.jackson@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "auditory",
+            "timeCommitment": 9,
+            "domainInterest": [
+                "Cloud Computing",
+                "DevOps"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-10T10:00:00Z"
+    },
+    {
+        "name": "Ivy King",
+        "email": "ivy.king@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "kinesthetic",
+            "timeCommitment": 7,
+            "domainInterest": [
+                "Mobile Development",
+                "UI/UX"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-11T10:00:00Z"
+    },
+    {
+        "name": "Jack Lee",
+        "email": "jack.lee@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 11,
+            "domainInterest": [
+                "Big Data",
+                "Data Science"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-12T10:00:00Z"
+    },
+    {
+        "name": "Kate Martin",
+        "email": "kate.martin@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 13,
+            "domainInterest": [
+                "Quantum Computing",
+                "Theoretical CS"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-13T10:00:00Z"
+    },
+    {
+        "name": "Leo Nelson",
+        "email": "leo.nelson@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "auditory",
+            "timeCommitment": 16,
+            "domainInterest": [
+                "Distributed Systems",
+                "Concurrency"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-14T10:00:00Z"
+    },
+    {
+        "name": "Mia Owens",
+        "email": "mia.owens@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "kinesthetic",
+            "timeCommitment": 4,
+            "domainInterest": [
+                "Software Testing",
+                "QA"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-15T10:00:00Z"
+    },
+    {
+        "name": "Nina Parker",
+        "email": "nina.parker@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 17,
+            "domainInterest": [
+                "Human-Computer Interaction",
+                "Accessibility"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-16T10:00:00Z"
+    },
+    {
+        "name": "Oscar Quinn",
+        "email": "oscar.quinn@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 19,
+            "domainInterest": [
+                "Natural Language Processing",
+                "Speech Recognition"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-17T10:00:00Z"
+    },
+    {
+        "name": "Paula Roberts",
+        "email": "paula.roberts@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "auditory",
+            "timeCommitment": 10,
+            "domainInterest": [
+                "Computer Vision",
+                "Image Processing"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-18T10:00:00Z"
+    },
+    {
+        "name": "Quinn Scott",
+        "email": "quinn.scott@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "kinesthetic",
+            "timeCommitment": 12,
+            "domainInterest": [
+                "Augmented Reality",
+                "Virtual Reality"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-19T10:00:00Z"
+    },
+    {
+        "name": "Rachel Taylor",
+        "email": "rachel.taylor@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 15,
+            "domainInterest": [
+                "Bioinformatics",
+                "Computational Biology"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-20T10:00:00Z"
+    },
+    {
+        "name": "Sam White",
+        "email": "sam.white@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 20,
+            "domainInterest": [
+                "E-commerce",
+                "Fintech"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-21T10:00:00Z"
+    },
+    {
+        "name": "Tina Young",
+        "email": "tina.young@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "auditory",
+            "timeCommitment": 8,
+            "domainInterest": [
+                "Blockchain",
+                "Cryptocurrency"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-22T10:00:00Z"
+    },
+    {
+        "name": "Uma Harris",
+        "email": "uma.harris@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "kinesthetic",
+            "timeCommitment": 11,
+            "domainInterest": [
+                "EdTech",
+                "E-learning"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-23T10:00:00Z"
+    },
+    {
+        "name": "Victor Adams",
+        "email": "victor.adams@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 13,
+            "domainInterest": [
+                "HealthTech",
+                "Medical Informatics"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-24T10:00:00Z"
+    },
+    {
+        "name": "Wendy Brown",
+        "email": "wendy.brown@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 16,
+            "domainInterest": [
+                "AgriTech",
+                "Environmental Informatics"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-25T10:00:00Z"
+    },
+    {
+        "name": "Xander Clark",
+        "email": "xander.clark@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "auditory",
+            "timeCommitment": 18,
+            "domainInterest": [
+                "Logistics",
+                "Supply Chain Management"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-26T10:00:00Z"
+    },
+    {
+        "name": "Yara Davis",
+        "email": "yara.davis@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "kinesthetic",
+            "timeCommitment": 7,
+            "domainInterest": [
+                "Automotive Tech",
+                "Autonomous Vehicles"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-27T10:00:00Z"
+    },
+    {
+        "name": "Zane Edwards",
+        "email": "zane.edwards@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 9,
+            "domainInterest": [
+                "Aerospace Tech",
+                "Aviation"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-28T10:00:00Z"
+    },
+    {
+        "name": "Amelia Foster",
+        "email": "amelia.foster@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 14,
+            "domainInterest": [
+                "Startups",
+                "Entrepreneurship"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-03-01T10:00:00Z"
+    },
+    {
+        "name": "Brian Green",
+        "email": "brian.green@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "auditory",
+            "timeCommitment": 10,
+            "domainInterest": [
+                "Job Interviews",
+                "Career Development"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-03-02T10:00:00Z"
+    },
+    {
+        "name": "Chloe Harris",
+        "email": "chloe.harris@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "kinesthetic",
+            "timeCommitment": 12,
+            "domainInterest": [
+                "Digital Marketing",
+                "SEO"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-03-03T10:00:00Z"
+    },
+    {
+        "name": "Daniel Johnson",
+        "email": "daniel.johnson@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 5,
+            "domainInterest": [
+                "Content Creation",
+                "Writing"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-03-04T10:00:00Z"
+    },
+    {
+        "name": "Aarav Sharma",
+        "email": "aarav.sharma@example.com",
+        "password": "password123",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 12,
+            "preferredFormat": "video",
+            "domainInterest": [
+                "Machine Learning",
+                "Artificial Intelligence"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-02T08:45:00Z"
+    },
+    {
+        "name": "Ishita Patel",
+        "email": "ishita.patel@example.com",
+        "password": "securepass456",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 8,
+            "preferredFormat": "text",
+            "domainInterest": [
+                "Cybersecurity",
+                "Ethical Hacking"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-03T10:15:00Z"
+    },
+    {
+        "name": "Rajesh Verma",
+        "email": "rajesh.verma@example.com",
+        "password": "rajesh@789",
+        "learningParameters": {
+            "learningStyle": "kinesthetic",
+            "timeCommitment": 15,
+            "preferredFormat": "interactive",
+            "domainInterest": [
+                "Blockchain",
+                "Cryptography"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-04T12:30:00Z"
+    },
+    {
+        "name": "Ananya Iyer",
+        "email": "ananya.iyer@example.com",
+        "password": "strongpass!123",
+        "learningParameters": {
+            "learningStyle": "auditory",
+            "timeCommitment": 5,
+            "preferredFormat": "video",
+            "domainInterest": [
+                "Frontend Development",
+                "UI/UX"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-05T14:20:00Z"
+    },
+    {
+        "name": "Kabir Choudhary",
+        "email": "kabir.choudhary@example.com",
+        "password": "kabir@pass",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 10,
+            "preferredFormat": "interactive",
+            "domainInterest": [
+                "Backend Development",
+                "Cloud Computing"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-06T09:10:00Z"
+    },
+    {
+        "name": "Sneha Reddy",
+        "email": "sneha.reddy@example.com",
+        "password": "password567",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 6,
+            "preferredFormat": "text",
+            "domainInterest": [
+                "Software Testing",
+                "Automation"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-07T11:50:00Z"
+    },
+    {
+        "name": "Aditya Joshi",
+        "email": "aditya.joshi@example.com",
+        "password": "adityaPass99",
+        "learningParameters": {
+            "learningStyle": "auditory",
+            "timeCommitment": 12,
+            "preferredFormat": "video",
+            "domainInterest": [
+                "Competitive Programming",
+                "Algorithms"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-08T15:30:00Z"
+    },
+    {
+        "name": "Meera Das",
+        "email": "meera.das@example.com",
+        "password": "securemeera123",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 7,
+            "preferredFormat": "text",
+            "domainInterest": [
+                "Data Science",
+                "Big Data"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-09T13:10:00Z"
+    },
+    {
+        "name": "Vikram Gupta",
+        "email": "vikram.gupta@example.com",
+        "password": "vikram@123",
+        "learningParameters": {
+            "learningStyle": "kinesthetic",
+            "timeCommitment": 20,
+            "preferredFormat": "interactive",
+            "domainInterest": [
+                "Game Development",
+                "Graphics Programming"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-10T16:40:00Z"
+    },
+    {
+        "name": "Pooja Nair",
+        "email": "pooja.nair@example.com",
+        "password": "pooja@pass",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 10,
+            "preferredFormat": "text",
+            "domainInterest": [
+                "Databases",
+                "SQL Optimization"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-11T14:15:00Z"
+    },
+    {
+        "name": "Ahmed Khan",
+        "email": "ahmed.khan@example.com",
+        "password": "ahmed@pass",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 10,
+            "preferredFormat": "video",
+            "domainInterest": [
+                "Software Engineering",
+                "System Design"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-12T08:30:00Z"
+    },
+    {
+        "name": "Ayesha Siddiqui",
+        "email": "ayesha.siddiqui@example.com",
+        "password": "ayeshaSecure456",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 6,
+            "preferredFormat": "text",
+            "domainInterest": [
+                "Data Structures",
+                "Algorithms"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-13T09:45:00Z"
+    },
+    {
+        "name": "Bilal Hussain",
+        "email": "bilal.hussain@example.com",
+        "password": "bilal@123",
+        "learningParameters": {
+            "learningStyle": "auditory",
+            "timeCommitment": 15,
+            "preferredFormat": "interactive",
+            "domainInterest": [
+                "Artificial Intelligence",
+                "Machine Learning"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-14T12:20:00Z"
+    },
+    {
+        "name": "Fatima Malik",
+        "email": "fatima.malik@example.com",
+        "password": "fatimaSecure99",
+        "learningParameters": {
+            "learningStyle": "kinesthetic",
+            "timeCommitment": 8,
+            "preferredFormat": "interactive",
+            "domainInterest": [
+                "Cybersecurity",
+                "Ethical Hacking"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-15T14:10:00Z"
+    },
+    {
+        "name": "Usman Qureshi",
+        "email": "usman.qureshi@example.com",
+        "password": "usman@pass",
+        "learningParameters": {
+            "learningStyle": "visual",
+            "timeCommitment": 12,
+            "preferredFormat": "video",
+            "domainInterest": [
+                "Web Development",
+                "Full Stack"
+            ],
+            "preferredDifficulty": "easy"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-16T10:55:00Z"
+    },
+    {
+        "name": "Zara Tariq",
+        "email": "zara.tariq@example.com",
+        "password": "zara@123",
+        "learningParameters": {
+            "learningStyle": "read/write",
+            "timeCommitment": 7,
+            "preferredFormat": "text",
+            "domainInterest": [
+                "Cloud Computing",
+                "DevOps"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-17T16:20:00Z"
+    },
+    {
+        "name": "Hamza Raza",
+        "email": "hamza.raza@example.com",
+        "password": "hamzaPass78",
+        "learningParameters": {
+            "learningStyle": "auditory",
+            "timeCommitment": 20,
+            "preferredFormat": "interactive",
+            "domainInterest": [
+                "Game Development",
+                "Graphics Programming"
+            ],
+            "preferredDifficulty": "advanced"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-18T14:40:00Z"
+    },
+    {
+        "name": "Sana Javed",
+        "email": "sana.javed@example.com",
+        "password": "sanaSecure101",
+        "learningParameters": {
+            "learningStyle": "kinesthetic",
+            "timeCommitment": 10,
+            "preferredFormat": "interactive",
+            "domainInterest": [
+                "Mobile App Development",
+                "UI/UX"
+            ],
+            "preferredDifficulty": "intermediate"
+        },
+        "quizzes": [],
+        "roadmaps": [],
+        "resetPasswordToken": null,
+        "resetPasswordExpires": null,
+        "dateJoined": "2025-02-19T11:15:00Z"
+    }
+]

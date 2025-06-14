@@ -1,0 +1,118 @@
+.report-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: auto;
+    /* padding: 2rem; */
+  }
+  
+  .report-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+  }
+
+  .title{
+    font-size: 15px;
+  }
+  
+  .chart-container {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .topic-report {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .topic-title {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .report-text {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .report-container {
+      padding: 10px;
+    }
+  
+    .report-heading {
+      font-size: 20px;
+    }
+  
+    .topic-title {
+      font-size: 18px;
+    }
+  }
+  
+  .report-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .report-heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .chart-container {
+    margin-bottom: 30px;
+  }
+  
+  .topic-report {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .topic-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .report-section {
+    margin-bottom: 15px;
+  }
+  
+  .report-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .week-plan {
+    margin-bottom: 10px;
+  }
+  
+  .week-plan h5 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  ul li a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  

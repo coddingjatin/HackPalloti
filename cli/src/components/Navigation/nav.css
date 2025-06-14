@@ -1,0 +1,5 @@
+/* Hides the dropdown arrow */
+.dropdown-toggle::after {
+    display: none;
+  }
+  
