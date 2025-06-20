@@ -1,0 +1,58 @@
+.custom-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.667); /* dark transparent */
+  backdrop-filter: blur(8px); /* blur effect */
+  -webkit-backdrop-filter: blur(8px); /* for Safari */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.167);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff; /* changed to white for dark bg */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: #89f7fe; /* optional hover color */
+}
+
+.nav-login-btn {
+  background: #00c6ff;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.nav-login-btn:hover {
+  background: #0096cc;
+}
