@@ -1,4 +1,5 @@
 "use client";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { useEffect, useState, useMemo } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { GoogleGenerativeAI } from "@google/generative-ai";
@@ -120,40 +121,86 @@ function TreeNode({ node }) {
   const skills = node.skills || { knows: [], learns: [] };
 
   return (
-    <div className="card mb-3 shadow-sm">
-      <div className="card-body">
-        <div className="d-flex justify-content-between align-items-center">
-          <h5 className="card-title">{node.title}</h5>
-          {node.children && node.children.length > 0 && (
-            <button
-              className="btn btn-link"
-              onClick={() => setIsCollapsed(!isCollapsed)}
-            >
-              {isCollapsed ? "▼" : "▲"}
-            </button>
-          )}
-        </div>
-        {!isCollapsed && (
-          <>
-            <p className="card-text text-muted">{node.description}</p>
-            <div className="mb-2">
-              <h6 className="fw-bold">Knows:</h6>
-              <SkillChip skills={skills.knows || []} type="knows" />
-            </div>
-            <div>
-              <h6 className="fw-bold">Learn:</h6>
-              <SkillChip skills={skills.learns || []} type="learns" />
-            </div>
-            {node.children && node.children.length > 0 && (
-              <div className="ms-3 border-start ps-3 mt-3">
-                {node.children.map((child, index) => (
-                  <TreeNode node={child} key={index} />
+    <div
+      className="position-relative mb-4 p-4 rounded-4 border border-primary-subtle shadow-lg bg-white bg-opacity-75"
+      style={{
+        backdropFilter: "blur(10px)",
+        borderLeft: "6px solid #0d6efd",
+        transition: "all 0.3s ease-in-out",
+      }}
+    >
+      {/* Collapse Button */}
+      {node.children?.length > 0 && (
+        <button
+          className="position-absolute top-0 end-0 m-3 btn p-0 border-0 bg-transparent"
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          style={{
+            transform: isCollapsed ? "rotate(180deg)" : "rotate(0deg)",
+            transition: "transform 0.2s ease",
+          }}
+        >
+          <ChevronDown size={22} color="#0d6efd" />
+        </button>
+      )}
+
+      {/* Title & Description */}
+      <h4 className="fw-bold text-dark mb-2">{node.title}</h4>
+      <p className="text-muted">{node.description}</p>
+
+      {!isCollapsed && (
+        <>
+          {/* Known Skills */}
+          {skills.knows?.length > 0 && (
+            <div className="mb-3">
+              <p className="text-muted fw-semibold mb-1">🎯 Already Knows</p>
+              <div className="d-flex flex-wrap gap-2">
+                {skills.knows.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-2 rounded-pill text-white fw-medium"
+                    style={{
+                      background: "linear-gradient(to right, #4CAF50, #81C784)",
+                      fontSize: "0.85rem",
+                    }}
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
-            )}
-          </>
-        )}
-      </div>
+            </div>
+          )}
+
+          {/* Learning Skills */}
+          {skills.learns?.length > 0 && (
+            <div className="mb-3">
+              <p className="text-muted fw-semibold mb-1">📘 Will Learn</p>
+              <div className="d-flex flex-wrap gap-2">
+                {skills.learns.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-2 rounded-pill text-white fw-medium"
+                    style={{
+                      background: "linear-gradient(to right, #2196F3, #64B5F6)",
+                      fontSize: "0.85rem",
+                    }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Children */}
+          {node.children?.length > 0 && (
+            <div className="mt-4 ps-4 border-start border-2 border-primary-subtle">
+              {node.children.map((child, index) => (
+                <TreeNode key={index} node={child} />
+              ))}
+            </div>
+          )}
+        </>
+      )}
     </div>
   );
 }
