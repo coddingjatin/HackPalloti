@@ -1,66 +1,139 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 const PricingSection = () => {
-  const pricingPlans = [
+  const [billingCycle, setBillingCycle] = useState("annual");
+
+  const plans = [
     {
-      title: "Basic Plan",
-      price: "$19/month",
-      features: ["1 User", "10GB Storage", "Email Support", "Basic Features"],
+      title: "Basic",
+      price: billingCycle === "annual" ? "₹3000" : "₹299",
+      features: ["3 Projects", "250 objects per project", "One Active User", "No Collaboration", "Basic Support"],
+      highlighted: false,
     },
     {
-      title: "Premium Plan",
-      price: "$49/month",
+      title: "Professional",
+      price: billingCycle === "annual" ? "₹4000" : "₹399",
       features: [
-        "5 Users",
-        "50GB Storage",
+        "20 Projects",
+        "800 objects per project",
+        "10 Active Users",
+        "Team Collaboration",
         "Priority Support",
-        "Advanced Features",
       ],
+      highlighted: true,
     },
     {
-      title: "Enterprise Plan",
-      price: "$99/month",
+      title: "Enterprise",
+      price: billingCycle === "annual" ? "₹5500" : "₹450",
       features: [
+        "Unlimited Projects",
+        "No object limit",
         "Unlimited Users",
-        "Unlimited Storage",
-        "24/7 Support",
-        "Custom Features",
+        "Team Collaboration",
+        "Top Priority Support",
       ],
+      highlighted: false,
     },
   ];
 
   return (
-    <section className="bg-none p-5">
-      <div>
-        <h2 className="text-center fw-bold mb-4">Our Pricing Plans</h2>
+    <section className="py-5 bg-light">
+      {/* Top Banner */}
+      <div
+        className="text-center py-5 text-white"
+        style={{
+          background: "linear-gradient(90deg, rgb(111, 52, 173) 0%, rgba(37, 116, 252, 0.86) 100%)",
+          borderRadius: "20px",
+          marginBottom: "2rem",
+          maxWidth: "900px",
+          marginInline: "auto",
+        }}
+      >
+        <h2 className="fw-bold mb-2">Choose Your Plan</h2>
+        <p className="mb-0">Unlock premium features to boost productivity and streamline your workflow.</p>
+        <p className="mb-3">Choose the plan that suits you best!</p>
+
+        {/* Toggle Switch */}
+        <div className="d-flex justify-content-center align-items-center gap-3">
+          <span className="text-white">Monthly billing</span>
+          <div
+            style={{
+              backgroundColor: "#fff",
+              borderRadius: "30px",
+              padding: "5px 8px",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <span
+              onClick={() => setBillingCycle("monthly")}
+              style={{
+                backgroundColor: billingCycle === "monthly" ? "#6a11cb" : "transparent",
+                color: billingCycle === "monthly" ? "#fff" : "#6a11cb",
+                padding: "5px 10px",
+                borderRadius: "20px",
+                fontWeight: "600",
+              }}
+            >
+              Monthly
+            </span>
+            <span
+              onClick={() => setBillingCycle("annual")}
+              style={{
+                backgroundColor: billingCycle === "annual" ? "#6a11cb" : "transparent",
+                color: billingCycle === "annual" ? "#fff" : "#6a11cb",
+                padding: "5px 10px",
+                borderRadius: "20px",
+                fontWeight: "600",
+              }}
+            >
+              Annual
+            </span>
+          </div>
+          <span className="badge text-bg-warning" style={{ borderRadius: "20px", fontSize: "0.8rem" }}>
+            Save up to 20%!
+          </span>
+        </div>
       </div>
-      <br />
-      <di className="h-70vh">
-        <Row className="g-4 justify-content-center">
-          {pricingPlans.map((plan, index) => (
-            <Col key={index} md={4} sm={6} xs={12}>
-              <Card className="border-0 shadow-sm h-100">
-                <Card.Body className="text-center p-4">
-                  <h4 className="fw-bold mb-3">{plan.title}</h4>
-                  <h5 className="text-primary mb-4">{plan.price}</h5>
-                  <ul className="list-unstyled">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="text-muted mb-2">
-                        <i className="bi bi-check-circle-fill text-success"></i>{" "}
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button variant="primary" size="lg" className="w-100">
-                    Choose Plan
+
+      {/* Cards */}
+      <Container>
+        <Row className="justify-content-center">
+          {plans.map((plan, index) => (
+            <Col key={index} md={4} className="mb-4">
+              <Card
+                className={`h-100 text-center shadow-sm ${
+                  plan.highlighted ? "border border-warning" : ""
+                }`}
+                style={{
+                  borderRadius: "20px",
+                  transform: plan.highlighted ? "scale(1.05)" : "scale(1)",
+                  zIndex: plan.highlighted ? 1 : 0,
+                  border: "1px solid rgba(0, 0, 0, 0.1)", // Light black border
+                }}
+              >
+                <Card.Body className="px-4 py-5">
+                  <Card.Title className="fw-bold text-uppercase mb-2">{plan.title}</Card.Title>
+                  <h2 className="fw-bold mb-4">{plan.price}</h2>
+                  {plan.features.map((feature, i) => (
+                    <p key={i} className="text-muted mb-2">
+                      {feature}
+                    </p>
+                  ))}
+                  <Button
+                    variant={plan.highlighted ? "warning" : "outline-dark"}
+                    className="mt-4 fw-semibold rounded-pill px-4"
+                  >
+                    Choose this plan
                   </Button>
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
-      </di>
+      </Container>
     </section>
   );
 };
