@@ -96,12 +96,12 @@ const LandingPage = () => {
         </Container>
         
       </section>
-<div style={{ marginTop: "-200px", lineHeight: "0", overflow: "hidden" }}>
+<div style={{ marginTop: "-33.5vh", lineHeight: "0", overflow: "hidden" }}>
   <svg
     viewBox="0 0 1440 320"
     style={{
       width: "100%",
-      height: "300px",
+      height: "auto",
       display: "block",
     }}
     xmlns="http://www.w3.org/2000/svg"
