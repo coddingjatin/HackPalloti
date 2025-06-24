@@ -15,9 +15,7 @@ const Room = () => {
   const socketRef = useRef(null);
 
   useEffect(() => {
-    // Connect to the Socket.io server
     socketRef.current = io('http://localhost:3000', {
-      // If not needed, try setting withCredentials to false
       withCredentials: true,
       transports: ['websocket'],
       reconnectionAttempts: 5,
@@ -26,7 +24,6 @@ const Room = () => {
 
     socketRef.current.on('connect', () => {
       setConnectionStatus('connected');
-      console.log('Connected to server');
     });
 
     socketRef.current.on('disconnect', () => {
@@ -38,7 +35,6 @@ const Room = () => {
       setConnectionStatus('error');
     });
 
-    // Listen for chat messages from other users
     socketRef.current.on('chat-message', (data) => {
       setMessages(prev => [
         ...prev,
@@ -46,7 +42,6 @@ const Room = () => {
       ]);
     });
 
-    // Listen for a new user connection
     socketRef.current.on('user-connected', (username) => {
       setMessages(prev => [
         ...prev,
@@ -62,7 +57,6 @@ const Room = () => {
       });
     });
 
-    // Listen for a user disconnection
     socketRef.current.on('user-disconnected', (username) => {
       setMessages(prev => [
         ...prev,
@@ -114,13 +108,17 @@ const Room = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <h2>Room: {roomId}</h2>
-      <p>Connection status: {connectionStatus}</p>
-      <div style={styles.userList}>
-        <strong>Online ({users.length}): </strong>
-        {users.join(', ')}
-      </div>
+    <div style={styles.wrapper}>
+      <header style={styles.header}>
+        <div>
+          <h2 style={styles.roomTitle}>Room: {roomId}</h2>
+          <div style={styles.subInfo}>
+            <span>Status: <strong>{connectionStatus}</strong></span> | 
+            <span> Online ({users.length}): {users.join(', ')}</span>
+          </div>
+        </div>
+      </header>
+
       <div style={styles.messagesContainer}>
         {messages.map((msg, i) => (
           <div
@@ -130,29 +128,32 @@ const Room = () => {
               alignSelf: msg.sender === userName ? 'flex-end' : 'flex-start',
               backgroundColor:
                 msg.sender === 'System'
-                  ? '#e6f7ff'
+                  ? '#f0f4f8'
                   : msg.sender === userName
-                  ? '#d9f7be'
-                  : '#f5f5f5',
+                  ? '#cce5ff'
+                  : '#f8f9fa',
             }}
           >
-            <strong>{msg.sender}: </strong>
-            {msg.text}
-            <small style={styles.timestamp}>
+            <div style={styles.senderName}>
+              {msg.sender}
+            </div>
+            <div>{msg.text}</div>
+            <div style={styles.timestamp}>
               {new Date(msg.timestamp).toLocaleTimeString()}
-            </small>
+            </div>
           </div>
         ))}
       </div>
+
       <form style={styles.form} onSubmit={handleSendMessage}>
         <input
           style={styles.messageInput}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Type your message..."
+          placeholder="Type a message..."
         />
         <button style={styles.sendButton} type="submit">
-          Send
+          ➤
         </button>
       </form>
     </div>
@@ -160,51 +161,89 @@ const Room = () => {
 };
 
 const styles = {
-  container: {
-    padding: '20px',
-    maxWidth: '800px',
-    margin: '0 auto'
+  wrapper: {
+    display: 'flex',
+    flexDirection: 'column',
+    maxWidth: '900px',
+    height: '90vh',
+    margin: '20px auto',
+    backgroundColor: '#ffffff',
+    borderRadius: '12px',
+    boxShadow: '0 6px 30px rgba(0,0,0,0.1)',
+    overflow: 'hidden',
   },
-  userList: {
-    color: '#666',
-    fontSize: '0.9em',
-    marginBottom: '10px'
+  header: {
+    padding: '15px 20px',
+    borderBottom: '1px solid #e0e0e0',
+    backgroundColor: '#f7fafd'
   },
-  messagesContainer: {
-    border: '1px solid #ddd',
-    borderRadius: '8px',
-    padding: '15px',
-    overflowY: 'auto',
-    height: '60vh',
-    marginBottom: '10px'
+  roomTitle: {
+    margin: 0,
+    color: '#007acc'
   },
+  subInfo: {
+    fontSize: '0.85em',
+    color: '#555',
+    marginTop: '4px'
+  },
+ messagesContainer: {
+  flex: 1,
+  display: 'flex',
+  flexDirection: 'column',
+  padding: '20px',
+  overflowY: 'auto',
+  background: `
+    linear-gradient(135deg, rgba(247, 251, 255, 0.95), rgba(234, 246, 255, 0.95)),
+    url('/logo.jpg')
+  `,
+ 
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+ },
   message: {
+    maxWidth: '70%',
+    padding: '10px 14px',
     marginBottom: '10px',
-    padding: '8px',
-    borderRadius: '4px'
+    borderRadius: '12px',
+    boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+    wordBreak: 'break-word'
+  },
+  senderName: {
+    fontWeight: 'bold',
+    marginBottom: '4px',
+    fontSize: '0.9em',
+    color: '#333'
   },
   timestamp: {
-    color: '#999',
-    marginLeft: '10px',
-    fontSize: '0.8em'
+    textAlign: 'right',
+    fontSize: '0.75em',
+    color: '#888',
+    marginTop: '4px'
   },
   form: {
     display: 'flex',
-    gap: '10px'
+    padding: '12px 20px',
+    borderTop: '1px solid #e0e0e0',
+    backgroundColor: '#fafafa'
   },
   messageInput: {
     flex: 1,
-    padding: '10px',
-    borderRadius: '4px',
-    border: '1px solid #ddd'
+    padding: '12px 16px',
+    borderRadius: '20px',
+    border: '1px solid #ccc',
+    outline: 'none',
+    fontSize: '1em'
   },
   sendButton: {
-    padding: '10px 20px',
-    backgroundColor: '#4CAF50',
-    color: 'white',
+    marginLeft: '10px',
+    padding: '10px 16px',
+    backgroundColor: '#007acc',
     border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer'
+    borderRadius: '50%',
+    color: '#fff',
+    fontSize: '1.2em',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s',
   }
 };
 
