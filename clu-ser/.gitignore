@@ -1,0 +1,9 @@
+**/.venv
+**/client
+**/node_modules
+*.md
+*.txt
+!requirements.txt
+*.env
+**/.env
+**/*.env.*

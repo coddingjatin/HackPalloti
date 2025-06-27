@@ -6,11 +6,11 @@ const FooterSection = () => {
   return (
     <footer className="text-light pt-0" style={{ backgroundColor: "#111" }}>
       {/* Wavy Top Border */}
-<div style={{ marginBottom: "-25px" }}>
+<div style={{ marginBottom: "-6.5vh" }}>
   <svg
     viewBox="0 0 1440 50"
-    preserveAspectRatio="none"
-    style={{ display: "block", width: "100%", height: "50px" }}
+    preserveAspectRatio="xMinYMin meet"
+    style={{ display: "block", width: "100%", height: "auto" }}
   >
     <path
       fill="#ffffff"

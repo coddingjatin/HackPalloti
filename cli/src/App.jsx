@@ -20,7 +20,8 @@ import Survey from './components/Survey/Survey';
 import Bot from "./components/Chatobot/Bot";
 import Meet from "./components/Meet/Meet";
 import Room from "./components/Meet/Room";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import StreaksQuestsPoints from "./components/Streaks/StreaksQuestsPoints";
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -42,6 +43,7 @@ function App() {
         {/* Protected Routes inside Layout */}
         <Route element={<Layout> {/* Wrap routes with Layout */} </Layout>}>
           <Route path="/home" element={<Dash />} />
+          <Route path="/streaks" element={<StreaksQuestsPoints />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/calendar" element={<Calender />} />
           <Route path="/security" element={<Security />} />

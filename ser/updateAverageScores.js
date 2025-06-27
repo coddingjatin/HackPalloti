@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const User = require("./models/userModel"); 
 const QuizAttempt = require("./models/quizAttemptSchema");
 
-mongoose.connect('mongodb://localhost:27017/techfiesta').then(() => {
+mongoose.connect('mongodb://localhost:27017/Hackpalloti').then(() => {
     console.log('Connected to MongoDB');
 }).catch(err => {
     console.error('Error connecting to MongoDB', err);

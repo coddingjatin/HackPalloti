@@ -7,6 +7,7 @@ import PricingSection from "./PricingSection";
 import FooterSection from "./FooterSection";
 import landingPageImage from "/Logoo1.png";
 import Navbar from "./Navbar";
+import HowItWorks from "./HowItWorks"; 
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ const LandingPage = () => {
           <Row className="align-items-center">
             <Col lg={6} className="text-center text-lg-start mb-5 mb-lg-0">
               <h1 className="display-4 fw-bold mb-3" style={{ color: "#1c1c1e" }}>
-                Continuous Learning{" "}
+                Tired of Boring {" "}
                 <span
                   style={{
                     background: "linear-gradient(to right,rgb(255, 255, 255),rgb(255, 255, 255))",
@@ -44,12 +45,12 @@ const LandingPage = () => {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  & Improvement
+                  Video Lectures?
                 </span>
               </h1>
               <p className="lead mb-4" style={{ maxWidth: "500px", color: "#eaf6ff" }}>
-                Make learning easy, effective and engaging. <br />
-                Create a culture of continuous learning by spending only a few minutes a day.
+                 We Introduce an AI learning companion that understands you and progress to deliver personalized<br />
+               gamified & personalized experiences, keeping you motivated, focused, and actively learning.
               </p>
               <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
                 <Button
@@ -94,14 +95,13 @@ const LandingPage = () => {
             </Col>
           </Row>
         </Container>
-        
       </section>
-<div style={{ marginTop: "-200px", lineHeight: "0", overflow: "hidden" }}>
+<div style={{ marginTop: "-33.5vh", lineHeight: "0", overflow: "hidden" }}>
   <svg
     viewBox="0 0 1440 320"
     style={{
       width: "100%",
-      height: "300px",
+      height: "auto",
       display: "block",
     }}
     xmlns="http://www.w3.org/2000/svg"
@@ -120,14 +120,16 @@ const LandingPage = () => {
           50% { transform: translateY(-10px); }
         }
       `}</style>
-      
-      <section id="features">
-        <FeaturesSection />
-      </section>
 
       <section id="pricing">
         <PricingSection />
       </section>
+
+      <section id="features">
+        <FeaturesSection />
+      </section>
+
+    <HowItWorks/>
 
       <section id="contact">
         <FooterSection />

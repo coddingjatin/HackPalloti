@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { NavBar } from '../components/Navigation/Navbar';
 import { SideNav } from '../components/Navigation/SideNav';
 import Notification from './Notification/Notification';
+import Bot from '../components/Chatobot/Bot'; 
 
 const Layout = () => {
   return (
@@ -13,12 +14,16 @@ const Layout = () => {
           <SideNav />
         </div>
         <div style={{ flex: 1, overflowY: 'auto', padding: '10px' }}>
-          <Outlet /> {/* This will render child routes inside Layout */}
+          <Outlet /> {/* Renders child pages */}
         </div>
       </div>
-      <Notification/>
+      <Notification />
+      
+      {/* 🟢 Add chatbot component globally here */}
+      <Bot context="You are a helpful assistant. Reply politely and with clarity." />
     </div>
   );
 };
 
 export default Layout;
+

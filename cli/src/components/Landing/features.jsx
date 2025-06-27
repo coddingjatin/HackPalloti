@@ -58,9 +58,12 @@ const FeaturesSection = () => {
   return (
     <section className="py-5 bg-white">
       <div className="text-center mb-5 px-3">
-        <h2 className="fw-bold mb-3">
-          Why Choose Our <span className="text-primary">SmartPath Buddy?</span>
-        </h2>
+      <h2
+        className="fw-bold mb-3"
+        style={{ fontSize: "1.8rem" }}
+      >
+        Why Choose Our <span className="text-primary">SmartPath Buddy?</span>
+      </h2>
         <p className="text-muted mb-0">
           Personalized, gamified, and AI-driven – everything you need to thrive and enjoy learning.
         </p>

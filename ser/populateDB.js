@@ -18,7 +18,7 @@ const usersFilePath = path.join(__dirname, 'users.json');
 const usersData = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 console.log(`Number of users: ${usersData.length}`);
 
-mongoose.connect('mongodb://localhost:27017/techfiestaPopulatedDB').then(() => {
+mongoose.connect('mongodb://localhost:27017/Hackpalloti').then(() => {
     console.log('Connected to MongoDB');
 }).catch(err => {
     console.error('Error connecting to MongoDB', err);

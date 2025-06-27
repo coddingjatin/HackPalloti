@@ -1,9 +1,38 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Profile.css'; // We'll create this for custom styles
+import './Profile.css';
 
 const Profile = () => {
-  // Example data - replace with actual data from your backend
+  const [isEditing, setIsEditing] = useState(false);
+
+  // State to manage profile fields
+  const [name, setName] = useState(localStorage.getItem("name") || "John Doe");
+  const [bio, setBio] = useState("AI & Machine Learning Enthusiast");
+  const [tags, setTags] = useState(["Python", "Machine Learning", "Data Science"]);
+
+  // Backup states for cancel
+  const [backup, setBackup] = useState({ name, bio, tags });
+
+  const toggleEdit = () => {
+    if (!isEditing) {
+      setBackup({ name, bio, tags }); // Save current before editing
+    }
+    setIsEditing(!isEditing);
+  };
+
+  const saveChanges = () => {
+    setIsEditing(false);
+    localStorage.setItem("name", name);
+    // Send to backend if needed
+  };
+
+  const cancelChanges = () => {
+    setName(backup.name);
+    setBio(backup.bio);
+    setTags(backup.tags);
+    setIsEditing(false);
+  };
+
   const userStats = {
     completedCourses: 12,
     avgScore: 85,
@@ -41,22 +70,59 @@ const Profile = () => {
                       className="rounded-circle img-thumbnail mb-3"
                       style={{ width: '150px', height: '150px', objectFit: 'cover' }}
                     />
-                    <span className="position-absolute bottom-0 end-0 p-2 bg-success border border-light rounded-circle">
-                    </span>
                   </div>
                 </div>
                 <div className="col-md-9">
                   <div className="ps-md-4">
-                    <h2 className="mb-1">{localStorage.getItem("name")}</h2>
-                    <p className="text-muted mb-2">AI & Machine Learning Enthusiast</p>
-                    <p className="small text-muted">Member since January 2024</p>
-                    <div className="mb-3">
-                      <span className="badge bg-primary me-2">Python</span>
-                      <span className="badge bg-secondary me-2">Machine Learning</span>
-                      <span className="badge bg-info me-2">Data Science</span>
-                    </div>
-                    <button className="btn btn-outline-primary btn-sm me-2">Edit Profile</button>
-                    <button className="btn btn-outline-secondary btn-sm">Settings</button>
+                    {isEditing ? (
+                      <>
+                        <input
+                          type="text"
+                          className="form-control mb-2"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                        />
+                        <textarea
+                          className="form-control mb-2"
+                          value={bio}
+                          onChange={(e) => setBio(e.target.value)}
+                        />
+                        <input
+                          type="text"
+                          className="form-control mb-3"
+                          value={tags.join(', ')}
+                          onChange={(e) =>
+                            setTags(e.target.value.split(',').map(tag => tag.trim()))
+                          }
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <h2 className="mb-1">{name}</h2>
+                        <p className="text-muted mb-2">{bio}</p>
+                        <p className="small text-muted">Member since January 2024</p>
+                        <div className="mb-3">
+                          {tags.map((tag, idx) => (
+                            <span key={idx} className="badge bg-primary me-2">{tag}</span>
+                          ))}
+                        </div>
+                      </>
+                    )}
+
+                    {isEditing ? (
+                      <>
+                        <button className="btn btn-success btn-sm me-2" onClick={saveChanges}>
+                          Save
+                        </button>
+                        <button className="btn btn-secondary btn-sm" onClick={cancelChanges}>
+                          Cancel
+                        </button>
+                      </>
+                    ) : (
+                      <button className="btn btn-outline-primary btn-sm me-2" onClick={toggleEdit}>
+                        Edit Profile
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -67,45 +133,25 @@ const Profile = () => {
 
       {/* Stats Cards */}
       <div className="row mb-4">
-        <div className="col-md-3 col-sm-6 mb-3">
-          <div className="card h-100 shadow-sm">
-            <div className="card-body text-center">
-              <i className="bi bi-book fs-3 text-primary mb-2"></i>
-              <h5 className="card-title">{userStats.completedCourses}</h5>
-              <p className="card-text text-muted">Completed Courses</p>
+        {[
+          { icon: "bi-book", label: "Completed Courses", value: userStats.completedCourses, color: "primary" },
+          { icon: "bi-trophy", label: "Average Score", value: `${userStats.avgScore}%`, color: "warning" },
+          { icon: "bi-clock", label: "Total Study Time", value: userStats.totalStudyTime, color: "info" },
+          { icon: "bi-lightning", label: "Learning Streak", value: `${userStats.learningStreak} days`, color: "danger" }
+        ].map((stat, i) => (
+          <div className="col-md-3 col-sm-6 mb-3" key={i}>
+            <div className="card h-100 shadow-sm text-center">
+              <div className="card-body">
+                <i className={`bi ${stat.icon} fs-3 text-${stat.color} mb-2`}></i>
+                <h5 className="card-title">{stat.value}</h5>
+                <p className="card-text text-muted">{stat.label}</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-md-3 col-sm-6 mb-3">
-          <div className="card h-100 shadow-sm">
-            <div className="card-body text-center">
-              <i className="bi bi-trophy fs-3 text-warning mb-2"></i>
-              <h5 className="card-title">{userStats.avgScore}%</h5>
-              <p className="card-text text-muted">Average Score</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3 col-sm-6 mb-3">
-          <div className="card h-100 shadow-sm">
-            <div className="card-body text-center">
-              <i className="bi bi-clock fs-3 text-info mb-2"></i>
-              <h5 className="card-title">{userStats.totalStudyTime}</h5>
-              <p className="card-text text-muted">Total Study Time</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-3 col-sm-6 mb-3">
-          <div className="card h-100 shadow-sm">
-            <div className="card-body text-center">
-              <i className="bi bi-lightning fs-3 text-danger mb-2"></i>
-              <h5 className="card-title">{userStats.learningStreak} days</h5>
-              <p className="card-text text-muted">Learning Streak</p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
 
-      {/* Learning Progress and Recent Activity */}
+      {/* Learning Progress */}
       <div className="row">
         <div className="col-lg-8 mb-4">
           <div className="card shadow h-100">
@@ -135,6 +181,7 @@ const Profile = () => {
           </div>
         </div>
 
+        {/* Recent Activity */}
         <div className="col-lg-4 mb-4">
           <div className="card shadow h-100">
             <div className="card-header bg-white">
@@ -144,7 +191,7 @@ const Profile = () => {
               <div className="list-group list-group-flush">
                 {recentActivities.map((activity, index) => (
                   <div key={index} className="list-group-item">
-                    <div className="d-flex w-100 justify-content-between">
+                    <div className="d-flex justify-content-between">
                       <p className="mb-1">{activity.activity}</p>
                       {activity.score && (
                         <span className="badge bg-success">{activity.score}%</span>
@@ -159,7 +206,7 @@ const Profile = () => {
         </div>
       </div>
 
-      {/* AI Learning Recommendations */}
+      {/* AI Recommendations */}
       <div className="row">
         <div className="col-12 mb-4">
           <div className="card shadow">
@@ -176,7 +223,9 @@ const Profile = () => {
                         <p className="card-text text-muted small">
                           Based on your progress and interests, we recommend exploring this learning path.
                         </p>
-                        <button className="btn btn-outline-primary btn-sm">Start Learning</button>
+                        <a href="/workflow" className="btn btn-outline-primary btn-sm">
+  Start Learning
+</a>
                       </div>
                     </div>
                   </div>

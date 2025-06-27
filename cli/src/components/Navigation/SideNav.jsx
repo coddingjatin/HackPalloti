@@ -13,7 +13,8 @@ import {
   CreditCard,
   PieChart,
   MessageCircleMore,
-  Lightbulb
+  Lightbulb,
+  Zap
 } from "lucide-react";
 
 import { Nav, Navbar, Container } from "react-bootstrap";
@@ -26,6 +27,7 @@ const mainNavItems = [
   { icon: PieChart, label: "Reports", href: "/reports" },
   { icon: Lightbulb, label: "Test", href: "/test" },
   { icon: Mail, label: "PictoFlow", href: "/pictoflow" },
+  { icon: Zap, label: "Streaks", href: "/streaks" },  // <-- Added Streaks here
   { icon: FileText, label: "WorkFlow", href: "/workflow" },
 ];
 
@@ -45,8 +47,7 @@ export function SideNav() {
     <Navbar bg="light" expand="lg" className="flex-column align-items-start h-100">
       <Container fluid>
         <Navbar.Brand href="#">
-          {/* <BarChart3 className="h-6 w-6 text-primary me-2" /> */}
-          {/* <span className="font-semibold text-xl">AI</span> */}
+          {/* Brand logo or title here if needed */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
@@ -58,7 +59,7 @@ export function SideNav() {
             </Nav.Item>
             {mainNavItems.map((item) => (
               <Nav.Item key={item.href}>
-                <Link to={item.href} className="nav-link"> {/* Replace Nav.Link with Link */}
+                <Link to={item.href} className="nav-link">
                   <item.icon className="h-5 w-5 me-2" />
                   {item.label}
                 </Link>
@@ -72,7 +73,7 @@ export function SideNav() {
             </Nav.Item>
             {resourcesNavItems.map((item) => (
               <Nav.Item key={item.href}>
-                <Link to={item.href} className="nav-link"> {/* Replace Nav.Link with Link */}
+                <Link to={item.href} className="nav-link">
                   <item.icon className="h-5 w-5 me-2" />
                   {item.label}
                 </Link>
@@ -86,7 +87,7 @@ export function SideNav() {
             </Nav.Item>
             {settingsNavItems.map((item) => (
               <Nav.Item key={item.href}>
-                <Link to={item.href} className="nav-link"> {/* Replace Nav.Link with Link */}
+                <Link to={item.href} className="nav-link">
                   <item.icon className="h-5 w-5 me-2" />
                   {item.label}
                 </Link>
