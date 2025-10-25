@@ -10,7 +10,6 @@ const eventRoutes = require('./routes/eventRoutes');
 const chatbotRoutes = require('./routes/chatbotRoutes'); // ✅ NEW
 
 dotenv.config(); // Load .env
-
 const app = express();
 
 app.use(cors());
