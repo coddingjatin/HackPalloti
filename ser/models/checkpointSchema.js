@@ -47,7 +47,6 @@ checkpointSchema.statics.createCheckpoint = async function(checkpoint){
         throw new Error(error.message);
     }
 }
-
 checkpointSchema.statics.getCheckpoints = async function(checkpointIds){
     try{
         const checkpoints = await this.find({ _id: { $in: checkpointIds } }).populate(
@@ -61,5 +60,4 @@ checkpointSchema.statics.getCheckpoints = async function(checkpointIds){
         throw new Error(error.message);
     }
 }
-
 module.exports = mongoose.model('Checkpoint', checkpointSchema);    
