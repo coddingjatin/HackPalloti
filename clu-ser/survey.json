@@ -11,7 +11,7 @@
                         {"text": "Reading documentation and writing notes", "value": {"visual": 3, "auditory": 2, "kinesthetic": 1, "read_write": 5}},
                         {"text": "Writing code and experimenting hands-on", "value": {"visual": 2, "auditory": 1, "kinesthetic": 5, "read_write": 3}}
                     ]
-                },
+                }, 
                 {
                     "question": "Which of these helps you understand a new algorithm best?",
                     "options": [
